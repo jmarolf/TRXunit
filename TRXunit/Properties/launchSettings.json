@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "TRXunit": {
+      "commandName": "Project",
+      "commandLineArgs": "C:\\source\\jmarolf\\XUnitTestProject1\\UnitTestProject1\\TestResults\\jmarolf_MAROLF-DEV_2018-08-02_14_48_03.trx"
+    }
+  }
+}
