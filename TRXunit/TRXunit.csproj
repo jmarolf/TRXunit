@@ -4,10 +4,19 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>net461</TargetFramework>
     <LangVersion>7.3</LangVersion>
+    <Version>1.0.0-beta1</Version>
+    <Authors>Microsoft</Authors>
+    <Description>Converts trx file to xUnit 2 xml format</Description>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <NoPackageAnalysis>true</NoPackageAnalysis>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="System.ValueTuple" Version="4.5.0" />
+    <None Include="$(OutputPath)\$(AssemblyName).exe" Pack="true" PackagePath="tools/" Visible="false" />
+    <None Include="$(OutputPath)\$(AssemblyName).exe.config" Pack="true" PackagePath="tools/" Visible="false" />
+    <None Include="$(OutputPath)\$(AssemblyName).pdb" Pack="true" PackagePath="tools/" Visible="false" />
+    <None Include="$(OutputPath)\System.ValueTuple.dll" Pack="true" PackagePath="tools/" Visible="false" />
   </ItemGroup>
 
 </Project>
