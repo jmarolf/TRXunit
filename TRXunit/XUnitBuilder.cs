@@ -58,14 +58,13 @@ namespace TRXunit {
                             var xFailure = new XElement("failure");
 
                             xFailure.Add(new XAttribute("exception-type", testResult.Failure.ExceptionType));
-                            var xMessage = new XElement("message") {
-                                Value = "<![CDATA[" + testResult.Failure.Message + "]]>"
-                            };
+
+                            var xMessage = new XElement("message");
+                            xMessage.Add(new XCData(testResult.Failure.Message));
                             xFailure.Add(xMessage);
 
-                            var xStackTrace = new XElement("stack-trace") {
-                                Value = "<![CDATA[" + testResult.Failure.StackTrace + "]]>"
-                            };
+                            var xStackTrace = new XElement("stack-trace");
+                            xStackTrace.Add(new XCData(testResult.Failure.StackTrace));
                             xFailure.Add(xStackTrace);
 
                             xTest.Add(xFailure);
